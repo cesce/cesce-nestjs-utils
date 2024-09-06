@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "nx: serve webapp",
+      "type": "shell",
+      "command": "npx",
+      "args": [
+        "nx",
+        "run",
+        "webapp:serve",
+        "--configuration=development"
+      ],
+      "problemMatcher": {
+        "base": "$tsc",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": {
+            "regexp": "Starting compilation in watch mode",
+            "file": 1
+          },
+          "endsPattern": {
+            "regexp": "Compilation complete",
+            "file": 1
+          }
+        }
+      },
+      "isBackground": false,
+      "presentation": {
+        "reveal": "silent",
+        "clear": true
+      },
+      "sourceMaps": true
+    }
+  ]
+}

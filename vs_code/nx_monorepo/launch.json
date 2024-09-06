@@ -1,0 +1,145 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "webapp",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "nx: serve webapp",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceFolder}/apps/frontend/webapp/src",
+      "sourceMaps": true,
+      "outputCapture": "std",
+      "trace": false,
+      "runtimeExecutable": null,
+      "timeout": 30000
+    },
+    {
+      "name": "gateway",
+      "type": "node",
+      "request": "launch",
+      "args": ["apps/backend/gateway/src/main.ts"],
+      "runtimeArgs": [
+        "--require",
+        "ts-node/register",
+        "--require",
+        "tsconfig-paths/register"
+      ],
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        // "NODE_ENV": "local",
+        // "NODE_PORT": "3000",
+        "TS_NODE_PROJECT": "apps/backend/gateway/tsconfig.app.json" // Specify the tsconfig to use
+      },
+      "envFile": "${workspaceFolder}/apps/backend/gateway/.development.env",
+      "sourceMaps": true,
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**" // Disable the "could not read source map" error for node_modules
+      ]
+    },
+    {
+      "name": "iam",
+      "type": "node",
+      "request": "launch",
+      "args": ["apps/backend/iam/src/main.ts"],
+      "runtimeArgs": [
+        "--require",
+        "ts-node/register",
+        "--require",
+        "tsconfig-paths/register"
+      ],
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "TS_NODE_PROJECT": "apps/backend/iam/tsconfig.app.json" // Specify the tsconfig to use
+      },
+      "envFile": "${workspaceFolder}/apps/backend/iam/.development.env",
+      "sourceMaps": true,
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**" // Disable the "could not read source map" error for node_modules
+      ]
+    },
+    {
+      "name": "notification",
+      "type": "node",
+      "request": "launch",
+      "args": ["apps/backend/notification/src/main.ts"],
+      "runtimeArgs": [
+        "--require",
+        "ts-node/register",
+        "--require",
+        "tsconfig-paths/register"
+      ],
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "TS_NODE_PROJECT": "apps/backend/notification/tsconfig.app.json" // Specify the tsconfig to use
+      },
+      "envFile": "${workspaceFolder}/apps/backend/notification/.development.env",
+      "sourceMaps": true,
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**" // Disable the "could not read source map" error for node_modules
+      ]
+    },
+    {
+      "name": "object-store",
+      "type": "node",
+      "request": "launch",
+      "args": ["apps/backend/object-store/src/main.ts"],
+      "runtimeArgs": [
+        "--require",
+        "ts-node/register",
+        "--require",
+        "tsconfig-paths/register"
+      ],
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "TS_NODE_PROJECT": "apps/backend/object-store/tsconfig.app.json" // Specify the tsconfig to use
+      },
+      "envFile": "${workspaceFolder}/apps/backend/object-store/.development.env",
+      "sourceMaps": true,
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**" // Disable the "could not read source map" error for node_modules
+      ]
+    },
+    {
+      "name": "object-store",
+      "type": "node",
+      "request": "launch",
+      "args": ["apps/backend/object-store/src/main.ts"],
+      "runtimeArgs": [
+        "--require",
+        "ts-node/register",
+        "--require",
+        "tsconfig-paths/register"
+      ],
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "TS_NODE_PROJECT": "apps/backend/inspection/tsconfig.app.json" // Specify the tsconfig to use
+      },
+      "envFile": "${workspaceFolder}/apps/backend/inspection/.development.env",
+      "sourceMaps": true,
+      "console": "internalConsole",
+      "outputCapture": "std",
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**" // Disable the "could not read source map" error for node_modules
+      ]
+    }
+  ]
+}
